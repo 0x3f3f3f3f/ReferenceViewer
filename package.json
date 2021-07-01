@@ -1,7 +1,6 @@
 {
-  "name": "com.unity.megumin.referenceviewer",
+  "name": "com.megumin.referenceviewer",
   "displayName": "ReferenceViewer",
-  "author": "Kumokyaku",
   "version": "1.0.0",
   "unity": "2018.3",
   "keywords": [
@@ -11,6 +10,5 @@
   ],
   "category": "Megumin",
   "description": "Find referencing resources and referenced resources.",
-  "hideInEditor": false,
-  "type": "tool"
+  "hideInEditor": false
 }
