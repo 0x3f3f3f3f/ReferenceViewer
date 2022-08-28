@@ -124,8 +124,9 @@ namespace ReferenceViewer_34282AD3401B490AB7C35AF746BC986E
             foreach (var item in allpath)
             {
                 var deps = AssetDatabase.GetDependencies(item, false);
-                alltask.Add(Task.Run(() =>
+                alltask.Add(Task.Run(async () =>
                             {
+                                await Task.Delay(1);
                                 var dep = item.Split('/');
 
                                 foreach (var ref_by in deps)
@@ -151,8 +152,9 @@ namespace ReferenceViewer_34282AD3401B490AB7C35AF746BC986E
             }
 
             TaskCompletionSource<int> source = new TaskCompletionSource<int>();
-            Task.Run(() =>
+            Task.Run(async () =>
             {
+                await Task.Delay(1);
                 Task.WaitAll(alltask.ToArray());
                 needReCal = false;
                 MainThreadInvoke(() =>
